@@ -1,6 +1,6 @@
 # State-Management in Angular, React und Vue
 
-Dieses Repository enthält den Code und die Untersuchungsergebnisse zum Thema **State-Management in Angular, React und Vue**. Das Projekt wurde im Rahmen des Master-Konferenzseminars erstellt.
+Dieses Repository enthält den Code zum Thema **State Management moderner Webframeworks am Beispiel von Vue, React & Angular**. Das Projekt wurde im Rahmen des Master-Konferenzseminars erstellt.
 
 ## Verzeichnisstruktur
 
