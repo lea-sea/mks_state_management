@@ -1,0 +1,165 @@
+
+/* Allgemeine Styles für die App */
+* {
+  box-sizing: border-box;
+}
+
+#app {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f7fc;
+  width: 100%;
+  min-height: 100vh; /* Damit die App die gesamte Bildschirmhöhe einnimmt */
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; 
+  width: 75em;
+  max-height: 75vh;
+  align-items: center;
+}
+
+h1 {
+  color: #333;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+/* Eingabefeld */
+.todo-input {
+  padding: 12px;
+  font-size: 1.2rem;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  transition: all 0.3s ease;
+  width: 75%;
+}
+
+.todo-input:focus {
+  border-color: #4CAF50;
+  outline: none;
+}
+
+/* Add Todo-Button */
+.add-button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 20px;
+  margin-right: 14px;
+}
+
+.add-button:hover {
+  background-color: #45a049;
+}
+
+.add-button:focus {
+  outline: none;
+}
+/* other buttons */
+button {
+  background-color: #4c95af;
+  color: white;
+  border: none;
+  min-width: 150px;
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #4577a0;
+}
+
+button:focus {
+  outline: none;
+}
+
+
+
+/* Todo List und Todo Items */
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  gap: 20px;;
+  width: 100%; /* Maximale Breite */
+}
+
+li {
+  display: flex;
+  gap: 5em;
+  height: 5em;
+  width: 75em;
+  align-items: center;
+  background-color: #fff;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+li:hover {
+  background-color: #f0f0f0;
+}
+
+span {
+  flex-grow: 5;
+  width: 20em ;
+  font-size: 1.1rem;
+  color: #555;
+  word-wrap: break-word; /* Zeilenumbruch bei langen Titeln */
+  overflow-wrap: break-word;
+}
+
+.feedback {
+  flex-grow: 1;
+  font-size: 1.1rem;
+  width: 5em ;
+  color: #555;
+  word-wrap: break-word; /* Zeilenumbruch bei langen Titeln */
+  overflow-wrap: break-word;
+}
+
+input[type="checkbox"] {
+  flex-grow: 1;
+  cursor: pointer;
+}
+
+/* Abgehakte Todos */
+.completed {
+  text-decoration: line-through;
+  color: #888;
+}
+
+/* Editiermodus */
+input[type="text"] {
+  width: 20em ;
+  border: 1px solid #ddd;
+  flex-grow: 5;
+  font-size: 1.1rem;
+
+}
+
+input[type="text"]:focus {
+  border-color: #4CAF50;
+  outline: none;
+}

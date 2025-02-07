@@ -1,0 +1,19 @@
+<h1>ToDo App mit Angular und Services</h1>
+<!-- Formular zum Hinzufügen neuer ToDos -->
+<form id="list" (ngSubmit)="onAddTodo()" #todoForm="ngForm">
+  <input 
+    [className]="'todo-input'"
+    [(ngModel)]="newTodoTitle" 
+    name="title" 
+    placeholder="Neues ToDo eingeben" 
+  />
+  <button type="submit" [className]="'add-button'">Hinzufügen</button>
+</form>
+
+<!-- Anzeige der ToDo-Elemente -->
+<div id="list">
+  <ul>
+      <app-todo *ngFor="let todo of todos" [todo]="todo" > </app-todo>
+  </ul>
+</div>
+

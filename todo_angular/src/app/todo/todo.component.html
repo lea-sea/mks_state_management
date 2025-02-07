@@ -1,0 +1,24 @@
+<li (dblclick)="editTodo.emit()">
+  <!-- Standardanzeige -->
+  <input 
+      type="checkbox" 
+      [checked]="todo.completed" 
+      (change)="toggleComplete.emit()" 
+    />
+
+    <span *ngIf="!isEditing" [ngClass]="{ 'completed': todo.completed }">
+      {{ todo.title }}
+    </span>
+    <button  *ngIf="!isEditing" (click)="deleteTodo.emit()"> Löschen </button>
+
+  <!-- Bearbeitungsmodus -->
+    <input *ngIf="isEditing"
+      type="text" 
+      [value]="todo.title" 
+      #titleInput
+      (keydown.enter)="saveTodo.emit(titleInput.value)" 
+      autofocus
+      (blur)="cancelEdit.emit()"
+    />
+    <button *ngIf="isEditing" (click)="cancelEdit.emit()">Abbrechen</button>
+</li>

@@ -1,0 +1,15 @@
+<h1>ToDo App mit Angular und NgRx</h1>
+<form id="list" (ngSubmit)="addTodo()" #todoForm="ngForm">
+<input     
+     [className]="'todo-input'"
+     [(ngModel)]="title" 
+     name="title"
+     placeholder="Neues ToDo eingeben" 
+/>
+<button type="submit" [className]="'add-button'">Hinzufügen</button>
+</form>
+<div id="list" >
+     <ul>
+          <app-todo *ngFor="let todo of todos$ | async" [todo]="todo"></app-todo>
+     </ul>
+</div>

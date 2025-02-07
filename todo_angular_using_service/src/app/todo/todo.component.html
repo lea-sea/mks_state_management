@@ -1,0 +1,20 @@
+<li (dblclick)="editTodo()">
+  <input 
+    type="checkbox" 
+    [checked]="todo.completed" 
+    (change)="toggleComplete()" 
+  /> 
+    <span *ngIf="!isEditing" [ngClass]="{ 'completed': todo.completed }">
+      {{ todo.title }}
+    </span>
+  <button *ngIf="!isEditing" (click)="deleteTodo()">Löschen</button>
+  <input *ngIf="isEditing"
+      type="text" 
+      [(ngModel)]="newTitle" 
+      placeholder="Bearbeite das ToDo" 
+      (keydown.enter)="saveTodo()"
+      autofocus
+      (blur)="cancelEdit()"
+    /> 
+  <button *ngIf="isEditing" (click)="cancelEdit()">Abbrechen</button>
+</li>
