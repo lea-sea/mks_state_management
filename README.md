@@ -22,7 +22,7 @@ Das Ziel dieses Projekts ist es, verschiedene State-Management-Ansätze in den d
 
 ### Voraussetzungen
 
-- Node.js (empfohlen: Version XYZ)
+- Node.js (empfohlen: v23.3.0)
 - Paketmanager (npm oder yarn)
 
 ### Installation
